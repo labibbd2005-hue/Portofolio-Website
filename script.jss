@@ -1,43 +1,27 @@
-  const isOpen = navPanel.classList.toggle('open');
-  menuButton.setAttribute('aria-expconst menuButton = document.querySelector('.menu-button');
-const navPanel = document.querySelector('.nav-panel');
-const navLinks = document.querySelectorAll('.nav-link');
+const header = document.querySelector('.site-header');
+const menu = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
 
-menuButton.addEventListener('click', () => {anded', String(isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 28), { passive: true });
+menu.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  menu.setAttribute('aria-expanded', open);
+  menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
 });
+document.querySelectorAll('nav a').forEach(link => link.addEventListener('click', () => nav.classList.remove('open')));
 
-navLinks.forEach((link) => link.addEventListener('click', () => {
-  navPanel.classList.remove('open');
-  menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.setAttribute('aria-label', 'Open menu');
-}));
+const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+  if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+}), { threshold: 0.14 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-const sections = document.querySelectorAll('main section[id]');
-const activateLink = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+const hero = document.querySelector('.hero');
+const circuit = document.querySelector('.hero-circuit');
+if (matchMedia('(pointer:fine)').matches) {
+  hero.addEventListener('pointermove', event => {
+    const x = (event.clientX / innerWidth - .5) * 10;
+    const y = (event.clientY / innerHeight - .5) * 7;
+    circuit.style.transform = `translate(${x}px, ${y}px)`;
   });
-}, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
-sections.forEach((section) => activateLink.observe(section));
-
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const revealItems = document.querySelectorAll('.reveal');
-  const reveal = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
-  }, { threshold: 0.1 });
-  revealItems.forEach((item) => reveal.observe(item));
-} else document.querySelectorAll('.reveal').forEach((item) => item.classList.add('visible'));
-
-document.querySelector('#contact-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const status = document.querySelector('#form-status');
-  if (!form.checkValidity()) {
-    status.textContent = 'Please complete all fields with a valid email address.';
-    form.reportValidity();
-    return;
-  }
-  status.textContent = 'Thanks for your message. This demo form has no email backend connected yet.';
-});
+  hero.addEventListener('pointerleave', () => circuit.style.transform = 'translate(0, 0)');
+}
