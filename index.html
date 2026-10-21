@@ -1,71 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Personal portfolio of Md Fokrul Alam Labib, an EEE student at CIU." />
-  <title>Md Fokrul Alam Labib | EEE Student</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Md Fokrul Alam Labib | EEE Student, CIU Bangladesh</title>
+  <meta name="description" content="Portfolio of Md Fokrul Alam Labib, a BSc Electrical & Electronic Engineering student at Chittagong Independent University, building skills in electronics, simulation and programming.">
+  <meta property="og:title" content="Md Fokrul Alam Labib | EEE Student">
+  <meta property="og:description" content="EEE student at CIU developing practical skills in electronics, simulation and programming.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a1220">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a1220'/%3E%3Cpath d='M3 16h6l3-9 5 18 3-9h9' fill='none' stroke='%2338bdf8' stroke-width='2.5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="Home">MFL<span>_</span></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button>
-    <nav aria-label="Primary navigation">
-      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <a class="monogram" href="#hero" aria-label="Md Fokrul Alam Labib, home">FAL</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="menu" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Learning Journey</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <svg class="hero-circuit" viewBox="0 0 1440 720" preserveAspectRatio="none" aria-hidden="true">
-        <path class="trace base" d="M0 494H180V395H370V520H535V310H735V420H915V225H1120V360H1440" />
-        <path class="trace current" d="M0 494H180V395H370V520H535V310H735V420H915V225H1120V360H1440" />
-        <path class="trace base dim" d="M0 620H125V555H302V610H467V466H630V550H800V480H1000V610H1220V505H1440" />
-        <circle class="node n1" cx="180" cy="395" r="5"/><circle class="node n2" cx="535" cy="310" r="5"/><circle class="node n3" cx="915" cy="225" r="5"/><circle class="node n4" cx="1120" cy="360" r="5"/>
-      </svg>
-      <div class="hero-content">
-        <p class="eyebrow"><span></span> CIU · EEE / 2026</p>
-        <h1 id="hero-title">Md Fokrul<br><em>Alam Labib.</em></h1>
-        <p class="hero-role">BSc EEE Student <b>|</b> Electronics · Robotics · Embedded Systems</p>
-        <p class="hero-copy">Building my foundation in electrical and electronic engineering through programming, simulation, circuits, and hands-on projects.</p>
-        <div class="hero-actions"><a class="button primary" href="#projects">View Projects <b>↗</b></a><a class="button ghost" href="#contact">Connect With Me</a></div>
+  <div class="rail" aria-hidden="true"><i class="rail-fill"></i></div>
+
+  <main id="main">
+    <section class="hero" id="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="mono tag">BSc Electrical &amp; Electronic Engineering, undergraduate</p>
+          <h1>Md Fokrul Alam Labib</h1>
+          <p class="sub">Electrical &amp; Electronic Engineering Student | CIU, Bangladesh</p>
+          <p class="lead">I am an Electrical &amp; Electronic Engineering student developing my foundation in electronics, programming, simulation, and engineering problem-solving. I am interested in building practical projects that connect theoretical concepts with real-world applications.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">Explore My Projects</a>
+            <a class="btn" href="#contact">Contact Me</a>
+          </div>
+          <p class="affil"><img src="assets/images/ciu-logo.jpg" width="34" height="34" alt="Chittagong Independent University logo"> Student at CIU, School of Science and Engineering</p>
+        </div>
+        <svg class="scope" viewBox="0 0 480 300" role="img" aria-label="Decorative oscilloscope sine wave on a measurement grid">
+          <defs><pattern id="g" width="40" height="30" patternUnits="userSpaceOnUse"><path d="M40 0H0V30" fill="none" stroke="#38bdf8" stroke-opacity=".14"/></pattern></defs>
+          <rect width="480" height="300" rx="10" fill="url(#g)" stroke="#38bdf8" stroke-opacity=".3"/>
+          <path d="M0 150H480" stroke="#38bdf8" stroke-opacity=".3"/>
+          <path class="wave" d="M0 150 C40 40 80 40 120 150 S200 260 240 150 S320 40 360 150 S440 260 480 150" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+          <circle class="node" cx="120" cy="150" r="5"/><circle class="node" cx="240" cy="150" r="5"/><circle class="node" cx="360" cy="150" r="5"/>
+          <text x="14" y="24" class="svgt">CH1  1 V/div</text><text x="466" y="288" text-anchor="end" class="svgt">illustrative signal</text>
+        </svg>
       </div>
-      <div class="scope-card" aria-hidden="true"><span>LIVE SIGNAL</span><svg viewBox="0 0 260 58"><path d="M0 29h20l10-21 14 42 17-42 16 42 17-21h22c12 0 10-19 23-19s10 38 22 38 11-19 23-19h31l12-21 14 42 17-42 16 21h20"/></svg><small>0.02 V/div · 1 ms/div</small></div>
-      <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
     </section>
 
-    <section class="section about" id="about">
-      <div class="section-label reveal">01 / ABOUT</div>
-      <div class="about-layout">
-        <div class="reveal"><h2>Learning how <em>things<br>connect.</em></h2><p>I’m an Electrical &amp; Electronic Engineering student at Chittagong Independent University, developing a practical technical foundation one experiment, simulation, and line of code at a time.</p><p>My interests sit where circuits meet code: electronics, robotics, embedded systems, automation, and engineering software.</p><div class="interest-list"><span>Electronics</span><span>Circuit Design</span><span>Robotics</span><span>Embedded Systems</span><span>Automation</span><span>Programming</span></div></div>
-        <div class="signal-panel reveal" aria-label="Animated electrical signal"><div class="panel-top"><span>ANALOG INPUT</span><span>CH 01</span></div><svg viewBox="0 0 520 240" role="img" aria-label="Sine wave signal"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="currentColor" stroke-width=".5"/></pattern></defs><rect width="520" height="240" fill="url(#dots)"/><path class="axis" d="M0 120H520M260 0V240"/><path class="wave" d="M0 120 C22 35 43 35 65 120 S108 205 130 120 S173 35 195 120 S238 205 260 120 S303 35 325 120 S368 205 390 120 S433 35 455 120 S498 205 520 120"/></svg><div class="panel-bottom"><span>1.000 kHz</span><span>5.00 Vpp</span><span>AC</span></div></div>
+    <section id="about"><div class="wrap narrow">
+      <h2>About</h2>
+      <div id="about-text"></div>
+    </div></section>
+
+    <section id="education"><div class="wrap">
+      <h2>Education</h2>
+      <div class="edu">
+        <div class="logos">
+          <figure><img src="assets/images/ciu-logo.jpg" width="264" height="262" alt="Chittagong Independent University (CIU) logo" loading="lazy"></figure>
+          <figure><img src="assets/images/sse-logo.jpg" width="264" height="135" alt="CIU School of Science and Engineering (SSE) logo" loading="lazy"></figure>
+        </div>
+        <dl id="edu-list"></dl>
       </div>
-    </section>
-
-    <section class="section skills" id="skills"><div class="section-label reveal">02 / SKILLS</div><div class="heading-row reveal"><h2>Tools I’m <em>building with.</em></h2><p>Growing capability through coursework, practice, and personal projects.</p></div><div class="skills-grid">
-      <article class="skill-card reveal"><div class="card-mark">01</div><h3>Engineering</h3><div class="chip-wrap"><span>Electrical &amp; Electronic Engineering</span><span>Circuit Analysis</span><span>MATLAB</span><span>Simulink</span><span>Circuit Simulation</span></div><i class="mini-trace"></i></article>
-      <article class="skill-card reveal"><div class="card-mark">02</div><h3>Programming</h3><div class="chip-wrap"><span>C</span><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div><i class="mini-trace"></i></article>
-      <article class="skill-card reveal"><div class="card-mark">03</div><h3>Tools</h3><div class="chip-wrap"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Canva</span></div><i class="mini-trace"></i></article>
+      <p class="note">Logos belong to their respective institutions. This is a personal website and is not endorsed by CIU.</p>
     </div></section>
 
-    <section class="section projects" id="projects"><div class="section-label reveal">03 / PROJECTS</div><div class="heading-row reveal"><h2>Selected <em>workbench.</em></h2><p>A record of what I’m making as I learn.</p></div><div class="projects-grid">
-      <article class="project-card featured reveal"><div class="project-schematic" aria-hidden="true"><span></span><span></span><span></span></div><div class="project-number">PROJECT / 01</div><h3>EEE Engineering<br>Calculator</h3><p>A web-based engineering calculator designed to provide useful calculations for electrical and electronic engineering study.</p><div class="tech">HTML <i>•</i> CSS <i>•</i> JAVASCRIPT</div><div class="project-links"><a href="#" aria-label="EEE Engineering Calculator live demo">Live Demo ↗</a><a href="#" aria-label="EEE Engineering Calculator GitHub repository">GitHub ↗</a></div></article>
-      <article class="project-card coming reveal"><div class="coming-icon">+</div><div><div class="project-number">IN DEVELOPMENT</div><h3>Circuit Simulation</h3><p>Coming Soon</p></div></article>
-      <article class="project-card coming reveal"><div class="coming-icon">+</div><div><div class="project-number">IN DEVELOPMENT</div><h3>Embedded Systems</h3><p>Coming Soon</p></div></article>
-      <article class="project-card coming reveal"><div class="coming-icon">+</div><div><div class="project-number">IN DEVELOPMENT</div><h3>Robotics &amp; Automation</h3><p>Coming Soon</p></div></article>
+    <section id="skills"><div class="wrap">
+      <h2>Technical skills</h2>
+      <p class="muted">Labels describe my current level honestly. Nothing here is advanced.</p>
+      <div id="skills-grid" class="grid"></div>
     </div></section>
 
-    <section class="section journey" id="journey"><div class="section-label reveal">04 / LEARNING JOURNEY</div><div class="heading-row reveal"><h2>Current <em>signal path.</em></h2><p>Every milestone is a new connection in progress.</p></div><div class="journey-line reveal"><div class="line-current"></div><article class="milestone done"><i></i><small>01</small><h3>MATLAB Onramp</h3><p>Completed</p></article><article class="milestone current"><i></i><small>02</small><h3>Simulink Onramp</h3><p>In Progress</p></article><article class="milestone future"><i></i><small>03</small><h3>C Programming</h3><p>Developing</p></article><article class="milestone future"><i></i><small>04</small><h3>Python</h3><p>Developing</p></article><article class="milestone future"><i></i><small>05</small><h3>Circuit Simulation</h3><p>Exploring</p></article></div><div class="legend reveal"><span><i class="done-dot"></i> Completed</span><span><i class="current-dot"></i> Current</span><span><i></i> Next</span></div></section>
+    <section id="projects"><div class="wrap">
+      <h2>Projects</h2>
+      <div id="projects-grid" class="grid"></div>
+    </div></section>
 
-    <section class="section education" id="education"><div class="section-label reveal">05 / EDUCATION &amp; ACTIVITIES</div><div class="education-layout"><div class="education-list reveal"><h2>Academic <em>foundation.</em></h2><article><div><small>2026 — PRESENT</small><h3>Chittagong Independent University</h3><p>BSc in Electrical &amp; Electronic Engineering (EEE)</p></div><b>CIU</b></article><article><div><small>PREVIOUS EDUCATION</small><h3>South Point School &amp; College</h3></div><b>SP</b></article></div><div class="activities-grid reveal"><article><span>01</span><h3>CIU Robotics Club</h3><p>Technical community activity</p></article><article><span>02</span><h3>IEEE &amp; student activities</h3><p>Learning and participation</p></article><article><span>03</span><h3>MATLAB Onramp</h3><p>Certificate completed</p></article><article><span>04</span><h3>Karate</h3><p>Purple Belt</p></article></div></div></section>
-    <section class="contact" id="contact"><div class="contact-grid" aria-hidden="true"></div><p class="eyebrow reveal"><span></span> 06 / CONTACT</p><h2 class="reveal">Let’s build<br><em>something.</em></h2><a class="contact-email reveal" href="mailto:your.email@example.com">your.email@example.com <b>↗</b></a><div class="contact-socials reveal"><a href="#">LinkedIn ↗</a><a href="#">GitHub ↗</a><a href="#top">Back to top ↑</a></div></section>
+    <section id="journey"><div class="wrap narrow">
+      <h2>Learning journey</h2>
+      <ol id="timeline" class="timeline"></ol>
+      <h3>Future interests</h3>
+      <p class="muted">Areas I want to develop. These are interests, not established expertise.</p>
+      <ul id="interests" class="chips"></ul>
+    </div></section>
+
+    <section id="contact"><div class="wrap narrow">
+      <h2>Contact</h2>
+      <p class="muted">Open to student-organization, internship and learning opportunities.</p>
+      <div id="contact-links" class="actions"></div>
+    </div></section>
   </main>
-  <footer><span>© 2026 MD FOKRUL ALAM LABIB</span><span>DESIGNED WITH CURIOSITY / BANGLADESH</span></footer>
-  <script src="script.js"></script>
+
+  <footer><div class="wrap">
+    <p>&copy; <span id="year">2026</span> Md Fokrul Alam Labib &middot; BSc EEE, Chittagong Independent University, School of Science and Engineering</p>
+  </div></footer>
+
+  <noscript>
+    <div class="wrap"><p class="note">JavaScript is off, so the detailed sections are hidden. Summary: Md Fokrul Alam Labib is a BSc EEE undergraduate at Chittagong Independent University, learning MATLAB, Simulink, C, Python and web basics, with an engineering calculator in progress.</p></div>
+  </noscript>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
