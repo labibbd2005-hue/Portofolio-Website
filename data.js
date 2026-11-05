@@ -1,82 +1,105 @@
-/* ==========================================================
-   EDIT YOUR CONTENT HERE. This is the only file you need to
-   change for routine updates.
-   Strings use quotes "like this". Keep the commas between items.
-   Leave a link as "" if you do not have one yet; it shows as
-   "not added yet" instead of a broken link.
-   ========================================================== */
 
-const SITE = {
+const PORTFOLIO_DATA = {
+  profile: {
+    name: "Md Fokrul Alam Labib",
+    title: "BSc EEE Student | Electronics • Robotics • Embedded Systems",
+    institution: "Chittagong Independent University (CIU)",
+    location: "Chittagong, Bangladesh",
+    tagline: "Building my foundation in electrical and electronic engineering through programming, simulation, circuits, and hands-on projects.",
+    about: [
+      "I'm an Electrical & Electronic Engineering student at Chittagong Independent University (CIU), currently developing my technical foundation.",
+      "I'm early in my journey — studying the theory, practising with simulation tools, and building small projects to turn what I learn into something that works.",
+      "My interests are centred on electronics, robotics, and embedded systems. I believe in documenting what I build honestly: what worked, what failed, and what I learned from it."
+    ]
+  },
 
-  /* ---- ABOUT: one string per paragraph ---- */
-  about: [
-    "I am an undergraduate EEE student at Chittagong Independent University. I am early in my degree and building my foundation through coursework, online learning and small projects.",
-    "My current focus is circuit fundamentals, MATLAB and Simulink, and programming in C and Python. My goal is to move from theory to practical work with electronics, embedded systems, robotics and automation."
-  ],
+links: {
+  email: {
+    href: "mailto:YOUR_EMAIL_HERE",
+    label: "Email me",
+    placeholder: true
+  },
 
-  /* ---- EDUCATION: change "status" when your situation changes ---- */
-  education: [
-    { label: "University", value: "Chittagong Independent University (CIU), Bangladesh" },
-    { label: "School", value: "School of Science and Engineering (SSE)" },
-    { label: "Degree", value: "Bachelor of Science in Electrical & Electronic Engineering" },
-    { label: "Status", value: "Undergraduate student" }
-  ],
+  linkedin: {
+    href: "https://www.linkedin.com/in/fokrul-alam-labib",
+    label: "LinkedIn",
+     placeholder : true
+  },
 
-  /* ---- SKILLS ----
-     level must be one of: "Learning", "Beginner", "Developing"   */
+  github: {
+    href: "https://github.com/labibbd2005-hue",
+    label: "GitHub",
+    placeholder: true
+  },
+
+  calcDemo: {
+    href: "https://labibbd2005-hue.github.io/eee-engineering-calculator/",
+    placeholder: false
+  },
+
+  calcRepo: {
+    href: "YOUR_CALCULATOR_GITHUB_REPOSITORY_URL_HERE",
+    placeholder: true
+  }
+},
+
+  nav: ["Home", "About", "Skills", "Projects", "Journey", "Education", "Contact"],
+
   skills: [
-    { category: "Programming", name: "C", level: "Developing", note: "Through coursework and practice" },
-    { category: "Programming", name: "Python", level: "Developing", note: "Independent practice" },
-    { category: "Programming", name: "HTML / CSS / JavaScript", level: "Beginner", note: "Used to build this site and the calculator" },
-    { category: "Engineering software", name: "MATLAB", level: "Beginner", note: "MATLAB Onramp completed" },
-    { category: "Engineering software", name: "Simulink", level: "Learning", note: "Simulink Onramp in progress" },
-    { category: "Electronics fundamentals", name: "Circuit analysis", level: "Learning", note: "Through university coursework" },
-    { category: "Electronics fundamentals", name: "Basic electronics", level: "Learning", note: "Through university coursework" },
-    { category: "Tools", name: "Git & GitHub", level: "Beginner", note: "" },
-    { category: "Tools", name: "VS Code", level: "Beginner", note: "" }
-  ],
-
-  /* ---- PROJECTS ----
-     status must be: "Planned", "In Progress" or "Completed".
-     Only use "Completed" once it truly is.
-     image: "" for none, or a path like "assets/projects/my-shot.png" */
-  projects: [
     {
-      title: "EEE Engineering Calculator",
-      status: "In Progress",
-      description: "A web-based calculator for common electrical and electronic engineering calculations, aimed at EEE students.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      image: "",
-      imageAlt: "",
-      github: "",
-      demo: ""
+      group: "Engineering",
+      items: ["Electrical & Electronic Engineering", "Circuit Analysis", "MATLAB", "Simulink", "Circuit Simulation"]
+    },
+    {
+      group: "Programming",
+      items: ["C", "Python", "HTML", "CSS", "JavaScript"]
+    },
+    {
+      group: "Tools",
+      items: ["Git", "GitHub", "VS Code", "Canva"]
     }
   ],
 
-  /* ---- LEARNING JOURNEY ----
-     status: "Completed", "In progress" or "Developing"
-     link: certificate or course URL, or "" for none        */
+  projects: [
+    {
+      title: "Scientific Calculator Web Application",
+      category: "Software & Web Development",
+      description: "A responsive scientific calculator supporting arithmetic, trigonometric functions, exponents, and memory operations. Built to strengthen JavaScript logic, DOM manipulation, and responsive UI design.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      demoLink: "https://labibbd2005-hue.github.io/eee-engineering-calculator/",
+      repoLink: "#placeholder-github-repo",
+      isLive: true
+    }
+  ],
+
+  comingSoon: [
+    "Circuit Simulation",
+    "MATLAB / Simulink",
+    "Embedded Systems",
+    "Robotics",
+    "Automation"
+  ],
+
   journey: [
-    { title: "MATLAB Onramp", status: "Completed", detail: "Introductory MATLAB course.", link: "" },
-    { title: "Simulink Onramp", status: "In progress", detail: "Building Simulink fundamentals.", link: "" },
-    { title: "C programming", status: "Developing", detail: "Coursework and practice.", link: "" },
-    { title: "Python", status: "Developing", detail: "Independent practice.", link: "" },
-    { title: "Circuit analysis and electronics", status: "Developing", detail: "University coursework.", link: "" }
+    { title: "MATLAB Onramp", status: "Completed" },
+    { title: "Simulink Onramp", status: "In Progress" },
+    { title: "C Programming", status: "Developing" },
+    { title: "Python", status: "Developing" },
+    { title: "Circuit Simulation", status: "Exploring" }
   ],
 
-  /* ---- FUTURE INTERESTS ---- */
-  interests: [
-    "Robotics and automation",
-    "Embedded systems",
-    "Electronics and circuit design",
-    "MATLAB / Simulink simulation",
-    "Practical engineering projects"
+  activities: [
+    { title: "MATLAB Onramp", note: "Certificate — completed" },
+    { title: "Karate", note: "Purple Belt" },
+    { title: "CIU Robotics Club", note: "Explore / Interested in" },
+    { title: "IEEE & student technical activities", note: "Explore / Interested in" },
+    { title: "Academic & technical activities", note: "Placeholder — add when confirmed" }
   ],
 
-  /* ---- CONTACT: paste full URLs. Email: just the address. ---- */
-  contact: {
-    email: "",
-    linkedin: "",
-    github: ""
+  education: {
+    degree: "BSc in Electrical & Electronic Engineering",
+    institution: "Chittagong Independent University (CIU)",
+    status: "Currently enrolled undergraduate student",
+    details: "Focusing on fundamental circuit theory, programming for engineering problems, simulation, and embedded hardware."
   }
 };
