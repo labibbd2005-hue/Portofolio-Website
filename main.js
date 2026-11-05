@@ -1,115 +1,177 @@
-/* Renders the page from js/data.js and adds small interactions.
-   You normally do not need to edit this file. */
-(function () {
-  document.documentElement.classList.add("js");
-  const $ = (id) => document.getElementById(id);
+// Interactive Functionality and Rendering for Md Fokrul Alam Labib Portfolio
 
-  // Build elements safely (textContent, never innerHTML) so data can't inject markup.
-  function el(tag, opts, kids) {
-    const n = document.createElement(tag);
-    opts = opts || {};
-    if (opts.cls) n.className = opts.cls;
-    if (opts.text) n.textContent = opts.text;
-    if (opts.attrs) for (const k in opts.attrs) n.setAttribute(k, opts.attrs[k]);
-    (kids || []).forEach((k) => n.appendChild(k));
-    return n;
-  }
-  const slug = (s) => s.toLowerCase().replace(/[^a-z]+/g, "");
-  const link = (text, url) => el("a", { text: text, attrs: { href: url, target: "_blank", rel: "noopener noreferrer" } });
+document.addEventListener("DOMContentLoaded", () => {
+  const data = PORTFOLIO_DATA;
 
-  // About
-  SITE.about.forEach((p) => $("about-text").appendChild(el("p", { text: p })));
+  // 1. Populate Hero Content
+  document.getElementById("hero-name").textContent = data.profile.name;
+  document.getElementById("hero-subtitle").textContent = data.profile.title;
+  document.getElementById("hero-tagline").textContent = data.profile.tagline;
 
-  // Education
-  SITE.education.forEach((e) => {
-    $("edu-list").appendChild(el("dt", { text: e.label }));
-    $("edu-list").appendChild(el("dd", { text: e.value }));
+  // 2. Navigation
+  const desktopNav = document.getElementById("desktop-nav");
+  const mobileNav = document.getElementById("mobile-dropdown");
+  data.nav.forEach(item => {
+    const id = item.toLowerCase();
+    const link = `<a href="#${id}">${item}</a>`;
+    desktopNav.insertAdjacentHTML("beforeend", link);
+    mobileNav.insertAdjacentHTML("beforeend", link);
   });
 
-  // Skills, grouped by category
-  let lastCat = "";
-  SITE.skills.forEach((s) => {
-    if (s.category !== lastCat) {
-      $("skills-grid").appendChild(el("h3", { cls: "cat", text: s.category }));
-      lastCat = s.category;
-    }
-    const kids = [el("h3", { text: s.name }), el("span", { cls: "level", text: s.level })];
-    if (s.note) kids.push(el("p", { text: s.note }));
-    $("skills-grid").appendChild(el("article", { cls: "card reveal" }, kids));
+  // Mobile menu toggle
+  const menuBtn = document.getElementById("mobile-menu-btn");
+  menuBtn.addEventListener("click", () => {
+    const isHidden = mobileNav.classList.toggle("hidden");
+    menuBtn.setAttribute("aria-expanded", !isHidden);
   });
 
-  // Projects
-  SITE.projects.forEach((p) => {
-    const kids = [];
-    if (p.image) kids.push(el("img", { cls: "proj-img", attrs: { src: p.image, alt: p.imageAlt || p.title, loading: "lazy" } }));
-    kids.push(el("h3", { text: p.title }));
-    kids.push(el("span", { cls: "status " + slug(p.status), text: p.status }));
-    kids.push(el("p", { text: p.description }));
-    kids.push(el("ul", { cls: "tech" }, p.tech.map((t) => el("li", { text: t }))));
-    const links = el("div", { cls: "links" });
-    links.appendChild(p.github ? link("GitHub", p.github) : el("span", { cls: "muted", text: "GitHub: not added yet" }));
-    if (p.demo) links.appendChild(link("Live demo", p.demo));
-    kids.push(links);
-    $("projects-grid").appendChild(el("article", { cls: "card reveal" }, kids));
-  });
-
-  // Learning journey
-  SITE.journey.forEach((j) => {
-    const kids = [el("strong", { text: j.title }), el("p", { text: j.detail }), el("span", { cls: "status " + slug(j.status), text: j.status })];
-    if (j.link) kids.push(el("p", {}, [link("View certificate / course", j.link)]));
-    $("timeline").appendChild(el("li", { cls: slug(j.status) }, kids));
-  });
-
-  SITE.interests.forEach((i) => $("interests").appendChild(el("li", { text: i })));
-
-  // Contact: empty values render as a dashed, non-clickable placeholder
-  const c = SITE.contact;
-  [["Email", c.email ? "mailto:" + c.email : "", true], ["LinkedIn", c.linkedin, false], ["GitHub", c.github, false]].forEach((x) => {
-    $("contact-links").appendChild(
-      x[1]
-        ? el("a", { cls: "btn", text: x[0], attrs: x[2] ? { href: x[1] } : { href: x[1], target: "_blank", rel: "noopener noreferrer" } })
-        : el("span", { cls: "btn off", text: x[0] + ": not added yet" })
-    );
-  });
-
-  $("year").textContent = new Date().getFullYear();
-
-  // Mobile menu
-  const toggle = document.querySelector(".nav-toggle"), menu = $("menu");
-  function setMenu(open) {
-    menu.classList.toggle("open", open);
-    toggle.setAttribute("aria-expanded", open);
-    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  }
-  toggle.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
-  menu.addEventListener("click", (e) => { if (e.target.tagName === "A") setMenu(false); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
-
-  // Active nav link
-  const links = menu.querySelectorAll("a");
-  const spy = new IntersectionObserver((entries) => {
-    entries.forEach((en) => {
-      if (en.isIntersecting) links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id));
+  mobileNav.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      mobileNav.classList.add("hidden");
+      menuBtn.setAttribute("aria-expanded", "false");
     });
-  }, { rootMargin: "-45% 0px -50% 0px" });
-  document.querySelectorAll("main section[id]").forEach((s) => spy.observe(s));
+  });
 
-  // Reveal cards on scroll (fails open: unsupported browsers just show everything)
-  const items = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { threshold: 0.1 });
-    items.forEach((i) => io.observe(i));
-  } else items.forEach((i) => i.classList.add("in"));
-
-  // Scroll progress along the PCB rail
-  const fill = document.querySelector(".rail-fill");
-  let tick = false;
-  addEventListener("scroll", () => {
-    if (tick) return; tick = true;
-    requestAnimationFrame(() => {
-      const h = document.documentElement;
-      fill.style.height = Math.min(100, (h.scrollTop / (h.scrollHeight - h.clientHeight || 1)) * 100) + "%";
-      tick = false;
-    });
+  // Header scroll shadow
+  const header = document.getElementById("site-header");
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 24);
   }, { passive: true });
-})();
+
+  // 3. About Section
+  const aboutContainer = document.getElementById("about-content");
+  data.profile.about.forEach(paragraph => {
+    const p = document.createElement("p");
+    p.textContent = paragraph;
+    aboutContainer.appendChild(p);
+  });
+
+  // 4. Skills Section
+  const skillsContainer = document.getElementById("skills-container");
+  data.skills.forEach(skillGroup => {
+    const card = document.createElement("div");
+    card.className = "skill-group reveal";
+    card.innerHTML = `
+      <h3 class="skill-title">${skillGroup.group}</h3>
+      <div class="skill-chips">
+        ${skillGroup.items.map(item => `<span class="chip">${item}</span>`).join("")}
+      </div>
+    `;
+    skillsContainer.appendChild(card);
+  });
+
+  // 5. Projects Section
+  const projectsContainer = document.getElementById("projects-container");
+  data.projects.forEach(project => {
+    const card = document.createElement("div");
+    card.className = "project-card reveal";
+    card.innerHTML = `
+      <p class="project-category">${project.category}</p>
+      <h3 class="project-title">${project.title}</h3>
+      <p class="project-desc">${project.description}</p>
+      <div class="project-tags">
+        ${project.tags.map(t => `<span class="project-tag">${t}</span>`).join("")}
+      </div>
+      <div class="project-links">
+        <a href="${project.demoLink}" class="btn btn-primary btn-sm">
+          Live Demo <span class="placeholder-badge">Placeholder</span>
+        </a>
+        <a href="${project.repoLink}" class="btn btn-ghost btn-sm">
+          GitHub Repo <span class="placeholder-badge">Placeholder</span>
+        </a>
+      </div>
+    `;
+    projectsContainer.appendChild(card);
+  });
+
+  // Coming Soon Tags
+  const comingSoonContainer = document.getElementById("coming-soon-container");
+  data.comingSoon.forEach(topic => {
+    const span = document.createElement("span");
+    span.className = "coming-soon-tag";
+    span.textContent = topic;
+    comingSoonContainer.appendChild(span);
+  });
+
+  // 6. Journey Section
+  const journeyContainer = document.getElementById("journey-container");
+  data.journey.forEach(item => {
+    const statusClass = item.status.replace(/\s+/g, "");
+    const div = document.createElement("div");
+    div.className = "status-item";
+    div.innerHTML = `
+      <span>${item.title}</span>
+      <span class="status-pill status-${statusClass}">${item.status}</span>
+    `;
+    journeyContainer.appendChild(div);
+  });
+
+  // Activities Section
+  const activitiesContainer = document.getElementById("activities-container");
+  data.activities.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "status-item";
+    div.innerHTML = `
+      <span>${item.title}</span>
+      <span class="status-pill status-Exploring">${item.note}</span>
+    `;
+    activitiesContainer.appendChild(div);
+  });
+
+  // 7. Education Section
+  document.getElementById("edu-degree").textContent = data.education.degree;
+  document.getElementById("edu-inst").textContent = data.education.institution;
+  document.getElementById("edu-status").textContent = data.education.status;
+  document.getElementById("edu-desc").textContent = data.education.details;
+
+  // 8. Contact Section
+  const contactContainer = document.getElementById("contact-container");
+  const contactItems = [
+    { label: "Email", val: data.links.email.label, href: data.links.email.href },
+    { label: "LinkedIn", val: data.links.linkedin.label, href: data.links.linkedin.href },
+    { label: "GitHub", val: data.links.github.label, href: data.links.github.href }
+  ];
+
+  contactItems.forEach(item => {
+    const a = document.createElement("a");
+    a.href = item.href;
+    a.className = "contact-card";
+    a.innerHTML = `
+      <span class="contact-label">${item.label}</span>
+      <span class="contact-value">${item.val} <span class="placeholder-badge">Placeholder</span></span>
+    `;
+    contactContainer.appendChild(a);
+  });
+
+  // Footer Year
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+
+  // Scroll Reveal Animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+  // Mouse Parallax for circuit backdrop (desktop fine pointers only)
+  const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const circuitSvg = document.getElementById("circuit-svg");
+
+  if (isFinePointer && !prefersReduced && circuitSvg) {
+    let raf = 0;
+    window.addEventListener("mousemove", (e) => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 14;
+        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+        circuitSvg.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      });
+    }, { passive: true });
+  }
+});
