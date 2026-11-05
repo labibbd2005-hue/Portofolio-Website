@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Md Fokrul Alam Labib | EEE Student Portfolio</title>
+  <title>Md Fokrul Alam Labib | EEE Portfolio</title>
 
-  <meta name="description" content="Md Fokrul Alam Labib, BSc EEE student at Chittagong Independent University. Exploring electronics, robotics, embedded systems and engineering technology.">
+  <meta name="description" content="Personal engineering portfolio of Md Fokrul Alam Labib, BSc EEE student at Chittagong Independent University. Interested in electronics, robotics and embedded systems.">
 
-  <meta name="theme-color" content="#090b0e">
+  <meta name="theme-color" content="#080c12">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,10 +18,8 @@
 
   <a href="#about" class="skip-link">Skip to content</a>
 
-  <!-- ================= HEADER ================= -->
-
+  <!-- Navigation -->
   <header id="site-header">
-
     <div class="nav-container">
 
       <a href="#home" class="logo">
@@ -32,42 +30,39 @@
 
       <button
         id="mobile-menu-btn"
-        aria-label="Toggle navigation menu"
+        aria-label="Toggle navigation"
         aria-expanded="false"
-        aria-controls="mobile-dropdown">
-
-        <svg width="22" height="22" viewBox="0 0 24 24"
+        aria-controls="mobile-dropdown"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24"
           fill="none" stroke="currentColor"
           stroke-width="2" stroke-linecap="round">
-
-          <line x1="3" y1="12" x2="21" y2="12"/>
           <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
           <line x1="3" y1="18" x2="21" y2="18"/>
-
         </svg>
-
       </button>
 
     </div>
 
     <div id="mobile-dropdown" class="mobile-nav hidden"></div>
-
   </header>
-
 
   <main>
 
-    <!-- ================= HERO SECTION ================= -->
-
+    <!-- HERO SECTION -->
     <section id="home" class="hero-section">
 
-      <!-- Animated circuit background -->
-
       <div class="circuit-bg" aria-hidden="true">
-
-        <svg id="circuit-svg"
-          viewBox="0 0 1200 700"
+        <svg id="circuit-svg" viewBox="0 0 1200 700"
           preserveAspectRatio="xMidYMid slice">
+
+          <defs>
+            <linearGradient id="signalGradient">
+              <stop offset="0%" stop-color="#0ea5e9"/>
+              <stop offset="100%" stop-color="#67e8f9"/>
+            </linearGradient>
+          </defs>
 
           <path d="M0 120 H260 L300 160 H520" class="trace"/>
           <path d="M0 120 H260 L300 160 H520" class="signal-line"/>
@@ -81,112 +76,106 @@
           <path d="M1200 560 H1020 L980 600 H820" class="trace"/>
           <path d="M1200 560 H1020 L980 600 H820" class="signal-line"/>
 
-          <circle cx="520" cy="160" r="3.5" class="node-pulse"/>
-          <circle cx="760" cy="130" r="3.5" class="node-pulse"/>
-          <circle cx="600" cy="520" r="3.5" class="node-pulse"/>
-          <circle cx="820" cy="600" r="3.5" class="node-pulse"/>
+          <circle cx="520" cy="160" r="4" class="node-pulse"/>
+          <circle cx="760" cy="130" r="4" class="node-pulse"/>
+          <circle cx="600" cy="520" r="4" class="node-pulse"/>
+          <circle cx="820" cy="600" r="4" class="node-pulse"/>
 
         </svg>
-
       </div>
 
+      <div class="container hero-content">
 
-      <!-- Hero content layout -->
+        <div class="hero-layout">
 
-      <div class="container hero-layout">
+          <!-- Profile Picture -->
+          <div class="profile-wrapper reveal">
 
-        <!-- LEFT: Introduction -->
-
-        <div class="hero-content">
-
-          <p class="eyebrow reveal">
-            // STUDENT · CIU · BANGLADESH
-          </p>
-
-          <h1 class="hero-name reveal" id="hero-name">
-            Md Fokrul Alam Labib
-          </h1>
-
-          <p class="hero-subtitle reveal" id="hero-subtitle"></p>
-
-          <p class="hero-bio reveal" id="hero-tagline"></p>
-
-
-          <!-- Action buttons -->
-
-          <div class="hero-actions reveal">
-
-            <a href="#projects" class="btn btn-primary">
-              View Projects →
-            </a>
-
-            <a href="#contact" class="btn btn-ghost">
-              Connect With Me
-            </a>
-
-          </div>
-
-
-          <!-- Engineering waveform -->
-
-          <div class="waveform-container reveal" aria-hidden="true">
-
-            <svg class="waveform-svg"
-              viewBox="0 0 1600 60"
-              preserveAspectRatio="none">
-
-              <polyline class="wave-track"
-                points="0,30 20,45 40,30 60,15 80,30 100,45 120,30 140,15 160,30 180,45 200,30 220,15 240,30 260,45 280,30 300,15 320,30 340,45 360,30 380,15 400,30 420,45 440,30 460,15 480,30 500,45 520,30 540,15 560,30 580,45 600,30 620,15 640,30 660,45 680,30 700,15 720,30 740,45 760,30 780,15 800,30 820,45 840,30 860,15 880,30 900,45 920,30 940,15 960,30 980,45 1000,30 1020,15 1040,30 1060,45 1080,30 1100,15 1120,30 1140,45 1160,30 1180,15 1200,30 1220,45 1240,30 1260,15 1280,30 1300,45 1320,30 1340,15 1360,30 1380,45 1400,30 1420,15 1440,30 1460,45 1480,30 1500,15 1520,30 1540,45 1560,30 1580,15 1600,30"/>
-
-            </svg>
-
-          </div>
-
-        </div>
-
-
-        <!-- RIGHT: Profile photograph -->
-
-        <div class="hero-photo-wrap reveal">
-
-          <div class="photo-decoration photo-decoration-top"></div>
-          <div class="photo-decoration photo-decoration-bottom"></div>
-
-          <div class="photo-frame">
+            <div class="profile-ring"></div>
 
             <img
-              src="assets/profile.jpg"
-              alt="Md Fokrul Alam Labib"
-              class="hero-photo"
+              src="profile.jpg"
+              alt="Portrait of Md Fokrul Alam Labib"
+              class="profile-image"
+              width="280"
+              height="280"
               fetchpriority="high"
             >
 
+            <span class="profile-status">
+              EEE STUDENT
+            </span>
+
           </div>
 
-          <p class="photo-caption">
-            <span class="status-indicator"></span>
-            EEE STUDENT · CIU
-          </p>
+          <!-- Hero Text -->
+          <div class="hero-text">
+
+            <p class="eyebrow reveal">
+              // STUDENT · CIU · BANGLADESH
+            </p>
+
+            <h1 class="hero-name reveal" id="hero-name">
+              Md Fokrul Alam Labib
+            </h1>
+
+            <p class="hero-subtitle reveal" id="hero-subtitle"></p>
+
+            <p class="hero-bio reveal" id="hero-tagline"></p>
+
+            <div class="hero-actions reveal">
+
+              <a href="#projects" class="btn btn-primary">
+                Explore Projects <span>→</span>
+              </a>
+
+              <a href="#contact" class="btn btn-ghost">
+                Connect With Me
+              </a>
+
+            </div>
+
+            <div class="hero-meta reveal">
+              <span>⚡ Electrical Engineering</span>
+              <span>⌁ Electronics & Robotics</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Animated Waveform -->
+        <div class="waveform-container reveal" aria-hidden="true">
+
+          <div class="waveform-label">
+            <span>SIGNAL MONITOR</span>
+            <span class="live-indicator">● SYSTEM ACTIVE</span>
+          </div>
+
+          <svg class="waveform-svg" viewBox="0 0 1600 60"
+            preserveAspectRatio="none">
+
+            <polyline class="wave-track"
+              points="0,30 20,45 40,30 60,15 80,30 100,45 120,30 140,15 160,30 180,45 200,30 220,15 240,30 260,45 280,30 300,15 320,30 340,45 360,30 380,15 400,30 420,45 440,30 460,15 480,30 500,45 520,30 540,15 560,30 580,45 600,30 620,15 640,30 660,45 680,30 700,15 720,30 740,45 760,30 780,15 800,30 820,45 840,30 860,15 880,30 900,45 920,30 940,15 960,30 980,45 1000,30 1020,15 1040,30 1060,45 1080,30 1100,15 1120,30 1140,45 1160,30 1180,15 1200,30 1220,45 1240,30 1260,15 1280,30 1300,45 1320,30 1340,15 1360,30 1380,45 1400,30 1420,15 1440,30 1460,45 1480,30 1500,15 1520,30 1540,45 1560,30 1580,15 1600,30"/>
+
+          </svg>
 
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- ================= ABOUT SECTION ================= -->
-
+    <!-- ABOUT -->
     <section id="about" class="section">
 
       <div class="container">
 
         <div class="section-header reveal">
-
-          <p class="eyebrow">01 · About</p>
-
+          <p class="eyebrow">01 / ABOUT</p>
           <h2>Learning the fundamentals, one circuit at a time.</h2>
-
+          <p class="section-description">
+            Understanding engineering through theory, experimentation and continuous learning.
+          </p>
         </div>
 
         <div class="about-grid">
@@ -195,73 +184,66 @@
 
           <div class="about-card reveal">
 
-            <div class="card-header-badge">CURRENT FOCUS</div>
+            <div class="card-header-badge">
+              CURRENT FOCUS
+            </div>
 
             <ul class="focus-list">
-
               <li>Circuit Analysis & Network Theorems</li>
               <li>MATLAB & Simulink Workflows</li>
               <li>C & Python for Engineering Computations</li>
               <li>Hands-on Lab Experiments at CIU</li>
-
             </ul>
 
           </div>
 
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- ================= SKILLS SECTION ================= -->
-
+    <!-- SKILLS -->
     <section id="skills" class="section">
 
       <div class="container">
 
         <div class="section-header reveal">
-
-          <p class="eyebrow">02 · Skills</p>
-
+          <p class="eyebrow">02 / TECHNICAL SKILLS</p>
           <h2>Technical foundations & working tools.</h2>
-
+          <p class="section-description">
+            Technologies and tools I am learning and exploring.
+          </p>
         </div>
 
         <div class="skills-grid" id="skills-container"></div>
 
       </div>
-
     </section>
 
-
-    <!-- ================= PROJECTS SECTION ================= -->
-
+    <!-- PROJECTS -->
     <section id="projects" class="section">
 
       <div class="container">
 
         <div class="section-header reveal">
-
-          <p class="eyebrow">03 · Projects</p>
-
-          <h2>Built & upcoming work.</h2>
-
+          <p class="eyebrow">03 / PROJECTS</p>
+          <h2>Building, experimenting and improving.</h2>
+          <p class="section-description">
+            A record of completed work and practical engineering experiments.
+          </p>
         </div>
 
         <div id="projects-container" class="projects-list"></div>
 
         <div class="coming-soon-block reveal">
 
+          <p class="eyebrow">FUTURE DEVELOPMENT</p>
+
           <h3 class="coming-soon-title">
-            Coming Soon — Planned Engineering Projects
+            Planned Engineering Projects
           </h3>
 
           <p class="coming-soon-subtitle">
-            As coursework and lab modules progress, hands-on projects
-            in these domains will be published here with open-source
-            repositories and schematics.
+            Upcoming projects as my academic knowledge and technical skills develop.
           </p>
 
           <div class="coming-soon-tags" id="coming-soon-container"></div>
@@ -269,22 +251,16 @@
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- ================= JOURNEY SECTION ================= -->
-
+    <!-- JOURNEY -->
     <section id="journey" class="section">
 
       <div class="container">
 
         <div class="section-header reveal">
-
-          <p class="eyebrow">04 · Journey & Growth</p>
-
+          <p class="eyebrow">04 / JOURNEY</p>
           <h2>Learning milestones & involvement.</h2>
-
         </div>
 
         <div class="journey-grid">
@@ -312,25 +288,21 @@
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- ================= EDUCATION SECTION ================= -->
-
+    <!-- EDUCATION -->
     <section id="education" class="section">
 
       <div class="container">
 
         <div class="section-header reveal">
-
-          <p class="eyebrow">05 · Education</p>
-
+          <p class="eyebrow">05 / EDUCATION</p>
           <h2>Academic background.</h2>
-
         </div>
 
         <div class="edu-card reveal">
+
+          <div class="edu-icon">⌘</div>
 
           <div class="edu-degree" id="edu-degree"></div>
 
@@ -343,46 +315,36 @@
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- ================= CONTACT SECTION ================= -->
-
+    <!-- CONTACT -->
     <section id="contact" class="section">
 
       <div class="container">
 
         <div class="section-header reveal">
-
-          <p class="eyebrow">06 · Contact</p>
-
-          <h2>Get in touch.</h2>
-
+          <p class="eyebrow">06 / CONTACT</p>
+          <h2>Let's connect.</h2>
         </div>
 
         <p class="contact-lead reveal">
-          Have a technical project, learning collaboration, or question?
-          Feel free to reach out directly.
+          Open to technical discussions, learning collaborations and opportunities.
         </p>
 
         <div class="contact-grid reveal" id="contact-container"></div>
 
       </div>
-
     </section>
 
   </main>
 
-
-  <!-- ================= FOOTER ================= -->
-
+  <!-- FOOTER -->
   <footer class="site-footer">
 
     <div class="container footer-content">
 
       <p>
-        &copy; <span id="current-year"></span>
+        © <span id="current-year"></span>
         Md Fokrul Alam Labib · BSc EEE Student
       </p>
 
@@ -394,16 +356,9 @@
 
   </footer>
 
-
-  <!-- ================= JAVASCRIPT ================= -->
-
+  <!-- JavaScript -->
   <script src="data.js"></script>
   <script src="main.js"></script>
 
 </body>
 </html>
-
-
-      
-
-
