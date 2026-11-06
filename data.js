@@ -84,11 +84,11 @@ const PORTFOLIO_DATA = {
         },
 
         {
-          name: "Electronics",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
-          type: "concept"
+        name: "Electronics",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
+        type: "concept"
         },
-
+        
         {
           name: "C Programming",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
@@ -148,9 +148,8 @@ const PORTFOLIO_DATA = {
         },
 
         {
-         
-          name: "GitHub",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+         name: "GitHub",
+         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
         },
 
         {
