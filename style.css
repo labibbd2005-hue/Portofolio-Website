@@ -1,4 +1,3 @@
-
 /* ==========================================
    LABIB EEE PORTFOLIO
    Complete CSS Design System
@@ -17,8 +16,10 @@
   --warn: #eab308;
   --ok: #22c55e;
   --glow: 0 0 20px rgba(14, 165, 233, 0.25);
+
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
   --font-mono: ui-monospace, SFMono-Regular, Menlo,
     Monaco, Consolas, monospace;
 }
@@ -187,7 +188,7 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 120px 0 60px;
+  padding: 130px 0 60px;
 }
 
 .circuit-bg {
@@ -221,6 +222,7 @@ a {
   from {
     stroke-dashoffset: 200;
   }
+
   to {
     stroke-dashoffset: 0;
   }
@@ -236,16 +238,114 @@ a {
     transform: scale(1);
     opacity: 0.4;
   }
+
   to {
     transform: scale(1.6);
     opacity: 1;
   }
 }
 
+
+/* ==========================================
+   HERO PROFILE LAYOUT
+   ========================================== */
+
 .hero-content {
   position: relative;
   z-index: 2;
   width: 100%;
+}
+
+/* Main two-column layout */
+
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: clamp(28px, 5vw, 65px);
+  width: 100%;
+}
+
+/* Profile photo container */
+
+.hero-photo {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Photo frame */
+
+.profile-image-frame {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  padding: 5px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    145deg,
+    var(--signal),
+    rgba(14, 165, 233, 0.1),
+    var(--primary)
+  );
+
+  box-shadow:
+    0 0 20px rgba(14, 165, 233, 0.18),
+    0 0 45px rgba(14, 165, 233, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.profile-image-frame:hover {
+  transform: translateY(-5px) scale(1.025);
+
+  box-shadow:
+    0 0 25px rgba(14, 165, 233, 0.35),
+    0 0 55px rgba(14, 165, 233, 0.15);
+}
+
+.profile-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background: var(--bg-card);
+  border: 3px solid var(--bg);
+}
+
+/* Fallback if no photo is found */
+
+.image-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--signal);
+  background: var(--bg-card);
+}
+
+.image-missing .image-fallback {
+  display: flex;
+}
+
+/* Introduction beside photo */
+
+.hero-introduction {
+  flex: 1;
+  min-width: 0;
+  max-width: 720px;
 }
 
 .eyebrow {
@@ -257,7 +357,7 @@ a {
 }
 
 .hero-name {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.5rem, 5.5vw, 4.3rem);
   font-weight: 700;
   line-height: 1.1;
   margin: 18px 0;
@@ -273,9 +373,9 @@ a {
 
 .hero-bio {
   max-width: 580px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   color: var(--muted);
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .hero-actions {
@@ -336,7 +436,7 @@ a {
    ========================================== */
 
 .waveform-container {
-  margin-top: 48px;
+  margin-top: 55px;
   max-width: 420px;
   height: 40px;
   overflow: hidden;
@@ -359,6 +459,7 @@ a {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
@@ -446,8 +547,7 @@ a {
 
 
 /* ==========================================
-   SKILLS SECTION
-   Technical Foundations + Working Tools
+   SKILLS
    ========================================== */
 
 .skills-grid {
@@ -466,6 +566,7 @@ a {
       transparent 55%
     ),
     var(--bg-card);
+
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 28px;
@@ -486,12 +587,14 @@ a {
   left: 0;
   width: 100%;
   height: 2px;
+
   background: linear-gradient(
     90deg,
     transparent,
     var(--signal),
     transparent
   );
+
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -943,7 +1046,28 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .hero-layout {
+    gap: 30px;
+  }
+
+  .hero-photo {
+    flex-basis: 185px;
+  }
+
+  .profile-image-frame {
+    width: 185px;
+    height: 185px;
+  }
+
+  .hero-name {
+    font-size: clamp(2.1rem, 5vw, 3.2rem);
+  }
 }
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
 
 @media (max-width: 600px) {
 
@@ -953,18 +1077,75 @@ a {
 
   .hero-section {
     min-height: 90vh;
+    padding: 120px 0 55px;
+  }
+
+  /* Keep the photo on the LEFT on mobile too */
+
+  .hero-layout {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .hero-photo {
+    flex: 0 0 112px;
+  }
+
+  .profile-image-frame {
+    width: 112px;
+    height: 112px;
+    padding: 3px;
+  }
+
+  .profile-image {
+    border-width: 2px;
+  }
+
+  .image-fallback {
+    font-size: 0.75rem;
+  }
+
+  .hero-introduction {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.04em;
   }
 
   .hero-name {
-    font-size: clamp(2.2rem, 10vw, 3.3rem);
+    font-size: clamp(1.35rem, 5vw, 2rem);
+    line-height: 1.15;
+    margin: 10px 0;
+    overflow-wrap: anywhere;
   }
 
   .hero-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
   }
 
   .hero-bio {
-    font-size: 1rem;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .hero-actions {
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 9px 12px;
+    font-size: 0.72rem;
+  }
+
+  .waveform-container {
+    margin-top: 38px;
   }
 
   .section-header {
@@ -1009,15 +1190,47 @@ a {
     flex-direction: column;
     align-items: flex-start;
   }
-
 }
 
-@media (max-width: 360px) {
+
+/* ==========================================
+   VERY SMALL MOBILE SCREENS
+   ========================================== */
+
+@media (max-width: 380px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-layout {
+    gap: 12px;
+  }
+
+  .hero-photo {
+    flex-basis: 92px;
+  }
+
+  .profile-image-frame {
+    width: 92px;
+    height: 92px;
+  }
+
+  .hero-name {
+    font-size: 1.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.66rem;
+  }
+
+  .hero-bio {
+    font-size: 0.72rem;
+  }
 
   .skill-chips {
     grid-template-columns: 1fr;
   }
-
 }
 
 
@@ -1045,5 +1258,4 @@ a {
     opacity: 1 !important;
     transform: none !important;
   }
-
 }
