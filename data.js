@@ -79,7 +79,7 @@ const PORTFOLIO_DATA = {
 
         {
           name: "Circuit Analysis",
-          icon: "https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/circuit-board.svg",
+          icon: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/diagram-project.svg",
           type: "concept"
         },
 
@@ -100,12 +100,12 @@ const PORTFOLIO_DATA = {
         },
 
         {
-          name: "HTML5",
+          name: "HTML",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
         },
 
         {
-          name: "CSS3",
+          name: "CSS",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
         },
 
@@ -148,6 +148,7 @@ const PORTFOLIO_DATA = {
         },
 
         {
+         
           name: "GitHub",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
         },
