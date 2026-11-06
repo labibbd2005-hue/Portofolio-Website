@@ -78,9 +78,9 @@ const PORTFOLIO_DATA = {
       items: [
 
          {
-         name: "Circuit Analysis",
-         icon: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/diagram-project.svg",
-         type: "concept"
+        name: "Circuit Analysis",
+        icon: "https://api.iconify.design/fa6-solid/diagram-project.svg?color=%2300D9FF",
+        type: "concept"
         },
 
         {
@@ -148,8 +148,8 @@ const PORTFOLIO_DATA = {
         },
 
         {
-         name: "GitHub",
-         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          name: "GitHub",
+          icon: "https://cdn.simpleicons.org/github/FFFFFF"
         },
 
         {
