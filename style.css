@@ -192,76 +192,58 @@ body {
 }
 
 /* PROFILE PICTURE */
+/* Hero Profile Layout */
 
-.profile-image-container {
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 45px;
   position: relative;
   z-index: 2;
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: flex-start;
 }
 
-.profile-image {
-  width: 160px;
-  height: 160px;
+.hero-profile {
+  flex-shrink: 0;
+}
+
+.profile-picture {
+  width: 210px;
+  height: 210px;
   object-fit: cover;
-  object-position: center;
   border-radius: 50%;
   border: 3px solid var(--primary);
-  padding: 4px;
-  background: var(--bg-card);
-  box-shadow: 0 0 25px rgba(14, 165, 233, 0.3);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  padding: 5px;
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.profile-image:hover {
-  transform: scale(1.06);
-  box-shadow: 0 0 40px rgba(14, 165, 233, 0.6);
+.profile-picture:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(14, 165, 233, 0.5);
 }
 
-.eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--primary);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 2;
+.hero-text {
+  flex: 1;
+  min-width: 0;
 }
 
-.hero-name {
-  position: relative;
-  z-index: 2;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  margin: 16px 0;
-}
+/* Mobile Responsive */
 
-.hero-subtitle {
-  position: relative;
-  z-index: 2;
-  font-family: var(--font-mono);
-  font-size: 1.05rem;
-  color: var(--signal);
-  margin-bottom: 16px;
-}
+@media (max-width: 600px) {
+  .hero-layout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
 
-.hero-bio {
-  position: relative;
-  z-index: 2;
-  max-width: 580px;
-  font-size: 1.15rem;
-  color: var(--muted);
-  margin-bottom: 32px;
-}
+  .profile-picture {
+    width: 145px;
+    height: 145px;
+  }
 
-.hero-actions {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
+  .hero-name {
+    font-size: 2.5rem;
+  }
 }
 
 /* BUTTONS */
