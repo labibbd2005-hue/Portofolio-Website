@@ -1,25 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md Fokrul Alam Labib — EEE Student Portfolio</title>
   <meta name="description" content="BSc EEE student at Chittagong Independent University learning electronics, robotics, and embedded systems.">
+  <title>Md Fokrul Alam Labib — EEE Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a href="#about" class="skip-link">Skip to content</a>
 
-  <!-- Header & Navigation -->
   <header id="site-header">
     <div class="nav-container">
       <a href="#home" class="logo">LABIB<span class="accent-dot">_</span></a>
       <nav id="desktop-nav" aria-label="Primary"></nav>
       <button id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
       </button>
     </div>
@@ -27,44 +27,59 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
+    <!-- HERO SECTION -->
     <section id="home" class="hero-section">
       <div class="circuit-bg" aria-hidden="true">
         <svg id="circuit-svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
-          <path d="M0 120 H260 L300 160 H520" class="trace" />
-          <path d="M0 120 H260 L300 160 H520" class="signal-line" />
-          <path d="M1200 90 H980 L940 130 H760" class="trace" />
-          <path d="M1200 90 H980 L940 130 H760" class="signal-line" />
-          <path d="M0 520 H180 L220 480 H420 L460 520 H600" class="trace" />
-          <path d="M0 520 H180 L220 480 H420 L460 520 H600" class="signal-line" />
-          <path d="M1200 560 H1020 L980 600 H820" class="trace" />
-          <path d="M1200 560 H1020 L980 600 H820" class="signal-line" />
-          <circle cx="520" cy="160" r="3.5" class="node-pulse" />
-          <circle cx="760" cy="130" r="3.5" class="node-pulse" />
-          <circle cx="600" cy="520" r="3.5" class="node-pulse" />
-          <circle cx="820" cy="600" r="3.5" class="node-pulse" />
+          <path d="M0 120 H260 L300 160 H520" class="trace"/>
+          <path d="M0 120 H260 L300 160 H520" class="signal-line"/>
+          <path d="M1200 90 H980 L940 130 H760" class="trace"/>
+          <path d="M1200 90 H980 L940 130 H760" class="signal-line"/>
+          <path d="M0 520 H180 L220 480 H420 L460 520 H600" class="trace"/>
+          <path d="M0 520 H180 L220 480 H420 L460 520 H600" class="signal-line"/>
+          <path d="M1200 560 H1020 L980 600 H820" class="trace"/>
+          <path d="M1200 560 H1020 L980 600 H820" class="signal-line"/>
+          <circle cx="520" cy="160" r="3.5" class="node-pulse"/>
+          <circle cx="760" cy="130" r="3.5" class="node-pulse"/>
+          <circle cx="600" cy="520" r="3.5" class="node-pulse"/>
+          <circle cx="820" cy="600" r="3.5" class="node-pulse"/>
         </svg>
       </div>
 
       <div class="container hero-content">
+
+        <!-- PROFILE PICTURE -->
+        <div class="profile-image-container reveal">
+          <img
+            src="assets/profile.jpg"
+            alt="Md Fokrul Alam Labib"
+            class="profile-image"
+          >
+        </div>
+
         <p class="eyebrow reveal">// student · CIU · Bangladesh</p>
-        <h1 class="reveal hero-name" id="hero-name">Md Fokrul Alam Labib</h1>
+
+        <h1 class="reveal hero-name" id="hero-name">
+          Md Fokrul Alam Labib
+        </h1>
+
         <p class="hero-subtitle reveal" id="hero-subtitle"></p>
         <p class="hero-bio reveal" id="hero-tagline"></p>
+
         <div class="hero-actions reveal">
-          <a href="#projects" class="btn btn-primary">View Projects &rarr;</a>
+          <a href="#projects" class="btn btn-primary">View Projects →</a>
           <a href="#contact" class="btn btn-ghost">Connect With Me</a>
         </div>
 
         <div class="waveform-container reveal" aria-hidden="true">
           <svg class="waveform-svg" viewBox="0 0 1600 60" preserveAspectRatio="none">
-            <polyline class="wave-track" points="0,30 20,45 40,30 60,15 80,30 100,45 120,30 140,15 160,30 180,45 200,30 220,15 240,30 260,45 280,30 300,15 320,30 340,45 360,30 380,15 400,30 420,45 440,30 460,15 480,30 500,45 520,30 540,15 560,30 580,45 600,30 620,15 640,30 660,45 680,30 700,15 720,30 740,45 760,30 780,15 800,30 820,45 840,30 860,15 880,30 900,45 920,30 940,15 960,30 980,45 1000,30 1020,15 1040,30 1060,45 1080,30 1100,15 1120,30 1140,45 1160,30 1180,15 1200,30 1220,45 1240,30 1260,15 1280,30 1300,45 1320,30 1340,15 1360,30 1380,45 1400,30 1420,15 1440,30 1460,45 1480,30 1500,15 1520,30 1540,45 1560,30 1580,15 1600,30" />
+            <polyline class="wave-track" points="0,30 20,45 40,30 60,15 80,30 100,45 120,30 140,15 160,30 180,45 200,30 220,15 240,30 260,45 280,30 300,15 320,30 340,45 360,30 380,15 400,30 420,45 440,30 460,15 480,30 500,45 520,30 540,15 560,30 580,45 600,30 620,15 640,30 660,45 680,30 700,15 720,30 740,45 760,30 780,15 800,30 820,45 840,30 860,15 880,30 900,45 920,30 940,15 960,30 980,45 1000,30 1020,15 1040,30 1060,45 1080,30 1100,15 1120,30 1140,45 1160,30 1180,15 1200,30 1220,45 1240,30 1260,15 1280,30 1300,45 1320,30 1340,15 1360,30 1380,45 1400,30 1420,15 1440,30 1460,45 1480,30 1500,15 1520,30 1540,45 1560,30 1580,15 1600,30"/>
           </svg>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT -->
     <section id="about" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -76,17 +91,17 @@
           <div class="about-card reveal">
             <div class="card-header-badge">CURRENT FOCUS</div>
             <ul class="focus-list">
-              <li><span>Circuit Analysis & Network Theorems</span></li>
-              <li><span>MATLAB & Simulink Workflows</span></li>
-              <li><span>C & Python for Engineering Computations</span></li>
-              <li><span>Hands-on Lab Experiments at CIU</span></li>
+              <li>Circuit Analysis & Network Theorems</li>
+              <li>MATLAB & Simulink Workflows</li>
+              <li>C & Python for Engineering Computations</li>
+              <li>Hands-on Lab Experiments at CIU</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- SKILLS -->
     <section id="skills" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -97,7 +112,7 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -113,7 +128,7 @@
       </div>
     </section>
 
-    <!-- Journey Section -->
+    <!-- JOURNEY -->
     <section id="journey" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -133,7 +148,7 @@
       </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- EDUCATION -->
     <section id="education" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -149,7 +164,7 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container">
         <div class="section-header reveal">
@@ -162,15 +177,15 @@
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>&copy; <span id="current-year"></span> Md Fokrul Alam Labib · BSc EEE Student</p>
-      <a href="#home" class="back-to-top">Back to top &uarr;</a>
+      <p>© <span id="current-year"></span> Md Fokrul Alam Labib · BSc EEE Student</p>
+      <a href="#home" class="back-to-top">Back to top ↑</a>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- JAVASCRIPT -->
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
