@@ -133,7 +133,7 @@ const PORTFOLIO_DATA = {
 
         {
           name: "Simulink",
-          icon: "https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/workflow.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg",
           type: "concept"
         },
 
