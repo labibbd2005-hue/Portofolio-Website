@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +11,6 @@
   <meta name="theme-color" content="#090b0e">
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- Technology icons -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 </head>
 
@@ -21,7 +18,7 @@
 
   <a href="#about" class="skip-link">Skip to content</a>
 
-  <!-- Navigation -->
+  <!-- NAVIGATION -->
   <header id="site-header">
     <div class="nav-container">
 
@@ -38,14 +35,12 @@
         <svg width="24" height="24" viewBox="0 0 24 24"
           fill="none" stroke="currentColor"
           stroke-width="2" stroke-linecap="round">
-
           <line x1="3" y1="6" x2="21" y2="6"/>
           <line x1="3" y1="12" x2="21" y2="12"/>
           <line x1="3" y1="18" x2="21" y2="18"/>
-
         </svg>
-      </button>
 
+      </button>
     </div>
 
     <div id="mobile-dropdown" class="mobile-nav hidden"></div>
@@ -54,11 +49,10 @@
 
   <main>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section id="home" class="hero-section">
 
       <div class="circuit-bg" aria-hidden="true">
-
         <svg id="circuit-svg" viewBox="0 0 1200 700"
           preserveAspectRatio="xMidYMid slice">
 
@@ -84,30 +78,57 @@
 
       <div class="container hero-content">
 
-        <p class="eyebrow reveal">
-          // STUDENT · CIU · BANGLADESH
-        </p>
+        <!-- PROFILE + INTRODUCTION -->
+        <div class="hero-layout">
 
-        <h1 class="hero-name reveal" id="hero-name">
-          Md Fokrul Alam Labib
-        </h1>
+          <!-- PROFILE IMAGE -->
+          <div class="hero-photo reveal">
+            <div class="profile-image-frame">
+              <img
+                src="assets/profile.jpg"
+                alt="Portrait of Md Fokrul Alam Labib"
+                class="profile-image"
+                onerror="this.style.display='none'; this.parentElement.classList.add('image-missing');"
+              >
 
-        <p class="hero-subtitle reveal" id="hero-subtitle"></p>
+              <span class="image-fallback" aria-hidden="true">
+                LABIB
+              </span>
+            </div>
+          </div>
 
-        <p class="hero-bio reveal" id="hero-tagline"></p>
+          <!-- INTRODUCTION -->
+          <div class="hero-introduction">
 
-        <div class="hero-actions reveal">
+            <p class="eyebrow reveal">
+              // STUDENT · CIU · BANGLADESH
+            </p>
 
-          <a href="#projects" class="btn btn-primary">
-            View Projects →
-          </a>
+            <h1 class="hero-name reveal" id="hero-name">
+              Md Fokrul Alam Labib
+            </h1>
 
-          <a href="#contact" class="btn btn-ghost">
-            Connect With Me
-          </a>
+            <p class="hero-subtitle reveal" id="hero-subtitle"></p>
+
+            <p class="hero-bio reveal" id="hero-tagline"></p>
+
+            <div class="hero-actions reveal">
+
+              <a href="#projects" class="btn btn-primary">
+                View Projects →
+              </a>
+
+              <a href="#contact" class="btn btn-ghost">
+                Connect With Me
+              </a>
+
+            </div>
+
+          </div>
 
         </div>
 
+        <!-- WAVEFORM -->
         <div class="waveform-container reveal" aria-hidden="true">
 
           <svg class="waveform-svg" viewBox="0 0 1600 60"
@@ -126,18 +147,15 @@
 
     <!-- ABOUT -->
     <section id="about" class="section">
-
       <div class="container">
 
         <div class="section-header reveal">
-
           <p class="eyebrow">01 · ABOUT</p>
 
           <h2>
             Learning the fundamentals,
             one circuit at a time.
           </h2>
-
         </div>
 
         <div class="about-grid">
@@ -151,12 +169,10 @@
             </div>
 
             <ul class="focus-list">
-
               <li>Circuit Analysis & Network Theorems</li>
               <li>MATLAB & Simulink Workflows</li>
               <li>C & Python for Engineering Computations</li>
               <li>Hands-on Lab Experiments at CIU</li>
-
             </ul>
 
           </div>
@@ -168,22 +184,17 @@
 
     <!-- SKILLS -->
     <section id="skills" class="section">
-
       <div class="container">
 
         <div class="section-header reveal">
-
           <p class="eyebrow">02 · SKILLS</p>
 
-          <h2>
-            Technical foundations & working tools.
-          </h2>
+          <h2>Technical foundations & working tools.</h2>
 
           <p class="section-description">
             Engineering concepts, programming fundamentals
             and software tools I am currently learning and using.
           </p>
-
         </div>
 
         <div class="skills-grid" id="skills-container"></div>
@@ -194,15 +205,11 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-
       <div class="container">
 
         <div class="section-header reveal">
-
           <p class="eyebrow">03 · PROJECTS</p>
-
           <h2>Built & upcoming work.</h2>
-
         </div>
 
         <div id="projects-container" class="projects-list"></div>
@@ -229,37 +236,29 @@
 
     <!-- JOURNEY -->
     <section id="journey" class="section">
-
       <div class="container">
 
         <div class="section-header reveal">
-
           <p class="eyebrow">04 · JOURNEY & GROWTH</p>
-
           <h2>Learning milestones & involvement.</h2>
-
         </div>
 
         <div class="journey-grid">
 
           <div class="reveal">
-
             <h3 class="subsection-title">
               Technical Learning Status
             </h3>
 
             <div id="journey-container" class="status-list"></div>
-
           </div>
 
           <div class="reveal">
-
             <h3 class="subsection-title">
               Activities & Interests
             </h3>
 
             <div id="activities-container" class="status-list"></div>
-
           </div>
 
         </div>
@@ -269,25 +268,18 @@
 
     <!-- EDUCATION -->
     <section id="education" class="section">
-
       <div class="container">
 
         <div class="section-header reveal">
-
           <p class="eyebrow">05 · EDUCATION</p>
-
           <h2>Academic background.</h2>
-
         </div>
 
         <div class="edu-card reveal">
 
           <div class="edu-degree" id="edu-degree"></div>
-
           <div class="edu-inst" id="edu-inst"></div>
-
           <p class="edu-status" id="edu-status"></p>
-
           <p class="edu-desc" id="edu-desc"></p>
 
         </div>
@@ -297,15 +289,11 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-
       <div class="container">
 
         <div class="section-header reveal">
-
           <p class="eyebrow">06 · CONTACT</p>
-
           <h2>Get in touch.</h2>
-
         </div>
 
         <p class="contact-lead reveal">
@@ -323,7 +311,6 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-
     <div class="container footer-content">
 
       <p>
@@ -336,11 +323,10 @@
       </a>
 
     </div>
-
   </footer>
 
 
-  <!-- JavaScript -->
+  <!-- JAVASCRIPT -->
   <script src="data.js"></script>
   <script src="main.js"></script>
 
