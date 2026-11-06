@@ -1,6 +1,7 @@
+
 /* =========================================
    LABIB EEE PORTFOLIO
-   Dark Engineering Interface
+   Modern Engineering Laboratory Theme
 ========================================= */
 
 :root {
@@ -20,11 +21,11 @@
 
   --glow: 0 0 20px rgba(14, 165, 233, 0.35);
 
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 
-  --font-mono: ui-monospace, SFMono-Regular, Menlo,
-    Monaco, Consolas, monospace;
+  --font-mono: ui-monospace, SFMono-Regular,
+    Menlo, Monaco, Consolas, monospace;
 }
 
 
@@ -51,20 +52,20 @@ body {
   overflow-x: hidden;
 }
 
-::selection {
-  background: var(--primary);
-  color: white;
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .container {
-  width: 100%;
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-a {
-  color: inherit;
+::selection {
+  background: var(--primary);
+  color: white;
 }
 
 
@@ -99,19 +100,14 @@ a {
   left: 0;
   right: 0;
   z-index: 50;
-
   padding: 20px 0;
-
   transition: all 0.3s ease;
 }
 
 #site-header.scrolled {
   background: rgba(9, 11, 14, 0.85);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
   border-bottom: 1px solid var(--border);
-
   padding: 12px 0;
 }
 
@@ -130,7 +126,6 @@ a {
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-
   color: var(--text);
   text-decoration: none;
 }
@@ -166,10 +161,8 @@ a {
 .mobile-nav {
   background: var(--bg-card);
   border: 1px solid var(--border);
-
   margin: 12px 24px;
   padding: 16px;
-
   border-radius: 8px;
 
   display: flex;
@@ -194,32 +187,20 @@ a {
 
 .hero-section {
   position: relative;
-
   min-height: 100vh;
 
   display: flex;
   align-items: center;
 
   overflow: hidden;
-
   padding: 120px 0 60px;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
-
-
-/* =========================================
-   CIRCUIT BACKGROUND
-========================================= */
+/* Circuit background */
 
 .circuit-bg {
   position: absolute;
   inset: 0;
-
   pointer-events: none;
   opacity: 0.8;
 }
@@ -227,7 +208,6 @@ a {
 #circuit-svg {
   width: 100%;
   height: 100%;
-  transition: transform 0.2s ease-out;
 }
 
 .trace {
@@ -275,105 +255,76 @@ a {
 
 
 /* =========================================
-   HERO PROFILE LAYOUT
+   NEW HERO PROFILE LAYOUT
 ========================================= */
 
-/* Hero Profile Layout */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
 
 .hero-profile-layout {
   display: flex;
   align-items: center;
+  justify-content: center;
+
   gap: 55px;
-  position: relative;
-  z-index: 2;
+  width: 100%;
 }
+
+/* Profile picture container */
 
 .profile-image-wrapper {
   flex-shrink: 0;
+
   width: 250px;
   height: 250px;
-  border-radius: 50%;
+
   padding: 5px;
+
+  border-radius: 50%;
   border: 2px solid var(--primary);
-  box-shadow: 0 0 30px rgba(14, 165, 233, 0.25);
-  overflow: hidden;
-}
-
-.profile-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.hero-text {
-  flex: 1;
-  min-width: 0;
-}
-
-/* Mobile layout */
-
-@media (max-width: 768px) {
-  .hero-profile-layout {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-  }
-
-  .profile-image-wrapper {
-    width: 180px;
-    height: 180px;
-  }
-
-  .hero-actions {
-    justify-content: center;
-  }
-
-  .hero-bio {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-
-/* Profile Picture */
-
-.profile-picture {
-  display: block;
-
-  width: 210px;
-  height: 210px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  border: 3px solid var(--primary);
-
-  padding: 5px;
 
   background: var(--bg-card);
 
   box-shadow:
-    0 0 20px rgba(14, 165, 233, 0.20),
-    0 0 40px rgba(14, 165, 233, 0.10);
+    0 0 20px rgba(14, 165, 233, 0.15),
+    0 0 45px rgba(14, 165, 233, 0.12);
+
+  overflow: hidden;
 
   transition:
     transform 0.4s ease,
     box-shadow 0.4s ease;
 }
 
-.profile-picture:hover {
-  transform: scale(1.05);
+.profile-image-wrapper:hover {
+  transform: scale(1.04);
 
   box-shadow:
-    0 0 25px rgba(14, 165, 233, 0.4),
-    0 0 50px rgba(14, 165, 233, 0.2);
+    0 0 25px rgba(14, 165, 233, 0.3),
+    0 0 55px rgba(14, 165, 233, 0.2);
 }
+
+/* Actual profile image */
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 50%;
+}
+
+/* Text beside profile picture */
 
 .hero-text {
   flex: 1;
   min-width: 0;
+  max-width: 720px;
 }
 
 
@@ -384,36 +335,30 @@ a {
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-
   color: var(--primary);
-
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .hero-name {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.3rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1.1;
-
   margin: 16px 0;
+  overflow-wrap: anywhere;
 }
 
 .hero-subtitle {
   font-family: var(--font-mono);
   font-size: 1.05rem;
-
   color: var(--signal);
-
   margin-bottom: 16px;
 }
 
 .hero-bio {
   max-width: 580px;
-
   font-size: 1.15rem;
   color: var(--muted);
-
   margin-bottom: 32px;
 }
 
@@ -439,11 +384,9 @@ a {
   font-weight: 600;
 
   border-radius: 6px;
-
   text-decoration: none;
 
   transition: all 0.2s ease;
-
   cursor: pointer;
 }
 
@@ -481,10 +424,8 @@ a {
 
 .waveform-container {
   margin-top: 48px;
-
   max-width: 420px;
   height: 40px;
-
   overflow: hidden;
 }
 
@@ -495,10 +436,8 @@ a {
 
 .wave-track {
   fill: none;
-
   stroke: var(--signal);
   stroke-width: 1.5;
-
   opacity: 0.8;
 
   animation: waveScroll 8s linear infinite;
@@ -521,7 +460,6 @@ a {
 
 .section {
   padding: 100px 0;
-
   border-top: 1px solid rgba(30, 38, 48, 0.4);
 }
 
@@ -532,7 +470,6 @@ a {
 .section-header h2 {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 600;
-
   margin-top: 8px;
 }
 
@@ -543,37 +480,28 @@ a {
 
 .about-grid {
   display: grid;
-
   grid-template-columns: 1.2fr 1fr;
-
   gap: 40px;
 }
 
 .about-text p {
   color: var(--muted);
-
   font-size: 1.1rem;
-
   margin-bottom: 20px;
 }
 
 .about-card {
   background: var(--bg-card);
-
   border: 1px solid var(--border);
   border-radius: 8px;
-
   padding: 28px;
 }
 
 .card-header-badge {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-
   letter-spacing: 0.1em;
-
   color: var(--primary);
-
   margin-bottom: 20px;
 }
 
@@ -583,9 +511,7 @@ a {
 
 .focus-list li {
   padding: 10px 0;
-
   border-bottom: 1px solid var(--border);
-
   color: var(--text);
   font-size: 0.95rem;
 }
@@ -601,29 +527,20 @@ a {
 
 .skills-grid {
   display: grid;
-
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  );
-
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 
 .skill-group {
   background: var(--bg-card);
-
   border: 1px solid var(--border);
   border-radius: 8px;
-
   padding: 24px;
 }
 
 .skill-title {
   font-size: 1.1rem;
-
   margin-bottom: 16px;
-
   color: var(--text);
 }
 
@@ -635,15 +552,11 @@ a {
 
 .chip {
   background: rgba(14, 165, 233, 0.08);
-
   border: 1px solid rgba(14, 165, 233, 0.2);
-
   color: var(--signal);
 
   padding: 6px 12px;
-
   border-radius: 4px;
-
   font-size: 0.85rem;
 }
 
@@ -655,38 +568,22 @@ a {
 .projects-list {
   display: flex;
   flex-direction: column;
-
   gap: 24px;
-
   margin-bottom: 40px;
 }
 
 .project-card {
   background: var(--bg-card);
-
   border: 1px solid var(--border);
   border-radius: 8px;
-
   padding: 32px;
-
-  transition:
-    border-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.project-card:hover {
-  border-color: var(--primary);
-  transform: translateY(-4px);
 }
 
 .project-category {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-
   color: var(--primary);
-
   margin-bottom: 8px;
-
   text-transform: uppercase;
 }
 
@@ -697,40 +594,30 @@ a {
 
 .project-desc {
   color: var(--muted);
-
   font-size: 1rem;
-
   margin-bottom: 20px;
-
   max-width: 800px;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-
   gap: 8px;
-
   margin-bottom: 24px;
 }
 
 .project-tag {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-
   border: 1px solid var(--border);
-
   padding: 3px 8px;
-
   border-radius: 3px;
-
   color: var(--muted);
 }
 
 .project-links {
   display: flex;
   flex-wrap: wrap;
-
   gap: 12px;
   align-items: center;
 }
@@ -738,15 +625,10 @@ a {
 .placeholder-badge {
   font-family: var(--font-mono);
   font-size: 0.65rem;
-
   padding: 2px 6px;
-
   border-radius: 3px;
-
   border: 1px solid var(--warn);
-
   color: var(--warn);
-
   text-transform: uppercase;
 }
 
@@ -757,10 +639,8 @@ a {
 
 .coming-soon-block {
   background: rgba(15, 19, 24, 0.5);
-
   border: 1px dashed var(--border);
   border-radius: 8px;
-
   padding: 32px;
 }
 
@@ -771,9 +651,7 @@ a {
 
 .coming-soon-subtitle {
   color: var(--muted);
-
   font-size: 0.95rem;
-
   margin-bottom: 20px;
 }
 
@@ -785,15 +663,10 @@ a {
 
 .coming-soon-tag {
   background: rgba(255, 255, 255, 0.03);
-
   border: 1px solid var(--border);
-
   color: var(--muted);
-
   padding: 6px 14px;
-
   border-radius: 4px;
-
   font-size: 0.85rem;
 }
 
@@ -804,53 +677,43 @@ a {
 
 .journey-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 32px;
 }
 
 .subsection-title {
   font-size: 1.1rem;
-
   margin-bottom: 20px;
-
   color: var(--text);
 }
 
 .status-list {
   display: flex;
   flex-direction: column;
-
   gap: 12px;
 }
 
 .status-item {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
 
   gap: 12px;
 
   background: var(--bg-card);
-
   border: 1px solid var(--border);
 
   padding: 16px 20px;
-
   border-radius: 6px;
 }
 
 .status-pill {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-
   padding: 4px 10px;
-
   border-radius: 4px;
-
   border: 1px solid transparent;
+  flex-shrink: 0;
 }
 
 .status-Completed {
@@ -884,34 +747,27 @@ a {
 
 .edu-card {
   background: var(--bg-card);
-
   border: 1px solid var(--border);
   border-radius: 8px;
-
   padding: 32px;
 }
 
 .edu-degree {
   font-size: 1.3rem;
   font-weight: 600;
-
   margin-bottom: 6px;
 }
 
 .edu-inst {
   font-size: 1rem;
-
   color: var(--signal);
-
   margin-bottom: 12px;
 }
 
 .edu-status {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-
   color: var(--muted);
-
   margin-bottom: 16px;
 }
 
@@ -927,55 +783,40 @@ a {
 
 .contact-lead {
   font-size: 1.1rem;
-
   color: var(--muted);
-
   margin-bottom: 32px;
 }
 
 .contact-grid {
   display: grid;
-
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(260px, 1fr)
-  );
-
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
 .contact-card {
   background: var(--bg-card);
-
   border: 1px solid var(--border);
   border-radius: 8px;
-
   padding: 24px;
 
   display: flex;
   flex-direction: column;
-
   gap: 8px;
 
   text-decoration: none;
   color: var(--text);
 
-  transition:
-    border-color 0.2s,
-    transform 0.2s;
+  transition: border-color 0.2s;
 }
 
 .contact-card:hover {
   border-color: var(--primary);
-  transform: translateY(-3px);
 }
 
 .contact-label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-
   color: var(--muted);
-
   text-transform: uppercase;
 }
 
@@ -984,7 +825,6 @@ a {
   font-weight: 500;
 
   display: flex;
-
   align-items: center;
   justify-content: space-between;
 }
@@ -996,30 +836,22 @@ a {
 
 .site-footer {
   border-top: 1px solid var(--border);
-
   padding: 32px 0;
-
   margin-top: 60px;
 }
 
 .footer-content {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
 
-  gap: 20px;
-
   font-size: 0.85rem;
-
   color: var(--muted);
 }
 
 .back-to-top {
   color: var(--muted);
   text-decoration: none;
-
-  transition: color 0.2s;
 }
 
 .back-to-top:hover {
@@ -1033,7 +865,6 @@ a {
 
 .reveal {
   opacity: 0;
-
   transform: translateY(20px);
 
   transition:
@@ -1051,7 +882,7 @@ a {
    RESPONSIVE DESIGN
 ========================================= */
 
-/* Tablet */
+/* Tablets */
 
 @media (max-width: 868px) {
 
@@ -1068,45 +899,48 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .hero-layout {
-    gap: 30px;
+  .hero-profile-layout {
+    gap: 35px;
   }
 
-  .profile-picture {
-    width: 175px;
-    height: 175px;
+  .profile-image-wrapper {
+    width: 210px;
+    height: 210px;
   }
 
   .hero-name {
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-size: clamp(2rem, 5vw, 3rem);
   }
 
 }
 
 
-/* Mobile */
+/* Mobile devices */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
   .hero-section {
-    padding: 120px 0 60px;
     min-height: auto;
+    padding: 130px 0 70px;
   }
 
-  .hero-layout {
+  .hero-profile-layout {
     flex-direction: column;
-    align-items: flex-start;
-
-    gap: 28px;
+    text-align: center;
+    gap: 30px;
   }
 
-  .profile-picture {
-    width: 145px;
-    height: 145px;
+  .profile-image-wrapper {
+    width: 190px;
+    height: 190px;
+  }
+
+  .hero-text {
+    width: 100%;
   }
 
   .hero-name {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 8vw, 3rem);
   }
 
   .hero-subtitle {
@@ -1114,57 +948,77 @@ a {
   }
 
   .hero-bio {
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1rem;
   }
 
+  .hero-actions {
+    justify-content: center;
+  }
+
   .waveform-container {
-    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .section {
     padding: 75px 0;
   }
 
-  .project-card,
-  .edu-card {
+  .project-card {
     padding: 24px;
   }
 
   .footer-content {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .status-item {
-    flex-wrap: wrap;
+    gap: 16px;
+    text-align: center;
   }
 
 }
 
 
-/* Small Mobile */
+/* Small mobile devices */
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
 
-  .hero-name {
-    font-size: 2.1rem;
+  .container {
+    padding: 0 18px;
   }
 
-  .profile-picture {
-    width: 125px;
-    height: 125px;
+  .profile-image-wrapper {
+    width: 165px;
+    height: 165px;
+  }
+
+  .hero-name {
+    font-size: 2rem;
   }
 
   .hero-actions {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    justify-content: center;
+  }
+
+  .status-item {
+    padding: 13px;
+    font-size: 0.85rem;
+  }
+
+  .status-pill {
+    font-size: 0.65rem;
   }
 
 }
 
 
 /* =========================================
-   ACCESSIBILITY: REDUCED MOTION
+   ACCESSIBILITY
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
