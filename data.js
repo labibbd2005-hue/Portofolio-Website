@@ -1,4 +1,5 @@
 
+
 // ==========================================
 // PORTFOLIO DATA
 // Md Fokrul Alam Labib | EEE Student
@@ -31,19 +32,20 @@ const PORTFOLIO_DATA = {
 
   // CONTACT AND PROFILE LINKS
   links: {
-    
-Email: {
-  href: "mailto:yourname@example.com",
-  label: "yourname@example.com"
-},
-LinkedIn: {
-  href: "https://www.linkedin.com/in/your-profile",
-  label: "Md Fokrul Alam Labib"
-},
+
+    email: {
+      href: "mailto:your.email@example.com",
+      label: "your.email@example.com"
+    },
+
+    linkedin: {
+      href: "https://www.linkedin.com/",
+      label: "LinkedIn Profile"
+    },
 
     github: {
       href: "https://github.com/labibbd2005-hue",
-      label: "labibbd2005-hue"
+      label: "GitHub Profile"
     }
 
   },
@@ -76,18 +78,18 @@ LinkedIn: {
 
       items: [
 
-         {
-        name: "Circuit Analysis",
-        icon: "https://api.iconify.design/fa6-solid/diagram-project.svg?color=%2300D9FF",
-        type: "concept"
+        {
+          name: "Circuit Analysis",
+          icon: "https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/circuit-board.svg",
+          type: "concept"
         },
 
         {
-        name: "Electronics",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
-        type: "concept"
+          name: "Electronics",
+          icon: "https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/cpu.svg",
+          type: "concept"
         },
-        
+
         {
           name: "C Programming",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
@@ -99,12 +101,12 @@ LinkedIn: {
         },
 
         {
-          name: "HTML",
+          name: "HTML5",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
         },
 
         {
-          name: "CSS",
+          name: "CSS3",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
         },
 
@@ -132,7 +134,7 @@ LinkedIn: {
 
         {
           name: "Simulink",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg",
+          icon: "https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/workflow.svg",
           type: "concept"
         },
 
@@ -148,7 +150,7 @@ LinkedIn: {
 
         {
           name: "GitHub",
-          icon: "https://cdn.simpleicons.org/github/FFFFFF"
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
         },
 
         {
