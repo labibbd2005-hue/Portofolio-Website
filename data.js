@@ -78,10 +78,10 @@ const PORTFOLIO_DATA = {
 
       items: [
 
-        {
-          name: "Circuit Analysis",
-          icon: "https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/circuit-board.svg",
-          type: "concept"
+         {
+        name: "Circuit Analysis",
+        icon: "https://api.iconify.design/fa6-solid/diagram-project.svg?color=%2300D9FF",
+        type: "concept"
         },
 
         {
@@ -150,7 +150,7 @@ const PORTFOLIO_DATA = {
 
         {
           name: "GitHub",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          icon: "https://cdn.simpleicons.org/github/FFFFFF"
         },
 
         {
