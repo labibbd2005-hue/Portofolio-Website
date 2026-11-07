@@ -84,9 +84,9 @@ const PORTFOLIO_DATA = {
         type: "concept"
         },
 
-        {
+       {
           name: "Electronics",
-          icon: "https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/cpu.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
           type: "concept"
         },
 
@@ -101,12 +101,12 @@ const PORTFOLIO_DATA = {
         },
 
         {
-          name: "HTML5",
+          name: "HTML",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
         },
 
         {
-          name: "CSS3",
+          name: "CSS",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
         },
 
@@ -132,11 +132,11 @@ const PORTFOLIO_DATA = {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg"
         },
 
-        {
+       {
           name: "Simulink",
-          icon: "https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/workflow.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg",
           type: "concept"
-        },
+       },
 
         {
           name: "VS Code",
