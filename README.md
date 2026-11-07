@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://labibbd2005-hue.github.io/Portofolio-Website/">Portfolio</a> •
-  <a href="www.linkedin.com/in/fokrul-alam-labib">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/fokrul-alam-labib/">LinkedIn</a>
 </p>
 
 ---
