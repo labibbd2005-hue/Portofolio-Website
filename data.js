@@ -32,9 +32,9 @@ const PORTFOLIO_DATA = {
   // CONTACT AND PROFILE LINKS
   links: {
 
-    Call: {
+    Email: {
       href: "mailto:your.email@example.com",
-      label: "01558149619"
+      label: "youremail.@example.com"
     },
 
     linkedin: {
