@@ -9,9 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="YOUR_WEBSITE_URL">Portfolio</a> •
-  <a href="YOUR_GITHUB_URL">GitHub</a> •
-  <a href="YOUR_LINKEDIN_URL">LinkedIn</a>
+  <a href="https://labibbd2005-hue.github.io/Portofolio-Website/">Portfolio</a> •
+  <a href="www.linkedin.com/in/fokrul-alam-labib">LinkedIn</a>
 </p>
 
 ---
@@ -40,18 +39,6 @@ My primary areas of interest include:
 | Development Tools | VS Code, Git, GitHub |
 
 *Skills are continuously developing alongside my academic studies.*
-
-## Featured Project
-
-**Scientific Calculator Web Application**
-
-A responsive scientific calculator built using HTML, CSS, and JavaScript.
-
-- Arithmetic and trigonometric operations
-- Exponents and memory functions
-- Responsive user interface
-
-[View Live Project](https://labibbd2005-hue.github.io/eee-engineering-calculator/)
 
 ## Portfolio Features
 
