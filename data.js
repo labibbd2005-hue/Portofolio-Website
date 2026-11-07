@@ -32,19 +32,19 @@ const PORTFOLIO_DATA = {
   // CONTACT AND PROFILE LINKS
   links: {
 
-    email: {
+    Call: {
       href: "mailto:your.email@example.com",
-      label: "your.email@example.com"
+      label: "01558149619"
     },
 
     linkedin: {
       href: "https://www.linkedin.com/",
-      label: "LinkedIn Profile"
+      label: "Md Fokrul Alam Labib"
     },
 
     github: {
       href: "https://github.com/labibbd2005-hue",
-      label: "GitHub Profile"
+      label: "labibbd2005-hue"
     }
 
   },
