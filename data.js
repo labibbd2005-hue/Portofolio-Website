@@ -228,7 +228,7 @@ const PORTFOLIO_DATA = {
 
     {
       title: "C Programming",
-      status: "Developing"
+      status: "In Progress"
     },
 
     {
