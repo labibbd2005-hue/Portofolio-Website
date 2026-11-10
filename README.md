@@ -58,10 +58,3 @@ My primary areas of interest include:
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white" />
 </p>
-
-## Repository Structure
-
-```text
-eee-portfolio/
-│
-├── index.html      # Website structure
