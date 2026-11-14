@@ -194,30 +194,6 @@ const PORTFOLIO_DATA = {
       isLive: true
 
     }
-    {
-
-      title: "RLC Circuit Simulator",
-
-      category: "Circuit Simulation",
-
-      description:
-        "A responsive scientific calculator supporting arithmetic, trigonometric functions, exponents, and memory operations. Built to strengthen JavaScript logic, DOM manipulation, and responsive UI design.",
-
-      tags: [
-        MATLAB
-        Simu-Link
-      ],
-
-      demoLink:
-        "https://labibbd2005-hue.github.io/eee-engineering-calculator/",
-
-      repoLink:
-        "https://github.com/labibbd2005-hue",
-
-      isLive: true
-
-    }
-
   ],
 
 
